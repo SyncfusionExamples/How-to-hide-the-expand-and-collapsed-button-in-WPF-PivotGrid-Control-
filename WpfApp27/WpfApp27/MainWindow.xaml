@@ -1,0 +1,47 @@
+﻿<Window
+    x:Class="WpfApp27.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfApp27"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sync="http://schemas.syncfusion.com/wpf"
+    Title="PivotGrid"
+    Width="800"
+    Height="450"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <Style x:Key="rowStyle" TargetType="sync:PivotGridTemplateCell">
+            <Setter Property="MinHeight" Value="25" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="sync:PivotGridTemplateCell">
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                            <TextBlock
+                                Grid.Column="1"
+                                Margin="3,4,2,0"
+                                VerticalAlignment="Top"
+                                FontFamily="Segoe UI"
+                                FontSize="12"
+                                Text="{Binding Path=Text, RelativeSource={RelativeSource TemplatedParent}}"
+                                TextWrapping="Wrap" />
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <sync:PivotGridControl x:Name="PivotGridControl1">
+            <sync:PivotGridControl.RowHeaderCellStyle>
+                <sync:PivotGridCellStyle Style="{StaticResource rowStyle}" />
+            </sync:PivotGridControl.RowHeaderCellStyle>
+            <sync:PivotGridControl.ColumnHeaderCellStyle>
+                <sync:PivotGridCellStyle Style="{StaticResource rowStyle}" />
+            </sync:PivotGridControl.ColumnHeaderCellStyle>
+        </sync:PivotGridControl>
+
+    </Grid>
+</Window>
