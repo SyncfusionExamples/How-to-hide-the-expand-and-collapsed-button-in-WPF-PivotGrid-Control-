@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp27
+namespace PivotGridCustomization
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,6 +24,9 @@ namespace WpfApp27
         public MainWindow()
         {
             InitializeComponent();
+
+            //Assign item source
+
             PivotGridControl1.ItemSource = ProductSales.GetSalesData();
             // Adding Pivot Rows to Grid.
 
@@ -46,7 +49,7 @@ namespace WpfApp27
             PivotGridControl1.Refresh();
         }
 
-      
+
     }
 
     public class ProductSales
@@ -132,4 +135,4 @@ namespace WpfApp27
 
     }
 
-    }
+}
