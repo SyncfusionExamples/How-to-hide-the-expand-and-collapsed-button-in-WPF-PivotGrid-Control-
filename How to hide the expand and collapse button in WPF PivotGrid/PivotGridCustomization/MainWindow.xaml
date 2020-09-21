@@ -8,12 +8,13 @@
         xmlns:sync="http://schemas.syncfusion.com/wpf"
         Title="PivotGridCustomization" WindowStartupLocation="CenterScreen" Height="450" Width="800">
     <Window.Resources>
-        <Style x:Key="rowStyle" TargetType="sync:PivotGridTemplateCell">
+        <Style x:Key="HeaderCellstyle" TargetType="sync:PivotGridTemplateCell">
             <Setter Property="MinHeight" Value="25" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="sync:PivotGridTemplateCell">
                         <StackPanel Grid.Column="1" Orientation="Horizontal">
+                          <!--Template with TextBlock alone-->
                             <TextBlock
                                 Grid.Column="1"
                                 Margin="3,4,2,0"
@@ -32,10 +33,10 @@
     <Grid>
         <sync:PivotGridControl x:Name="PivotGridControl1">
             <sync:PivotGridControl.RowHeaderCellStyle>
-                <sync:PivotGridCellStyle Style="{StaticResource rowStyle}" />
+                <sync:PivotGridCellStyle Style="{StaticResource HeaderCellstyle}" />
             </sync:PivotGridControl.RowHeaderCellStyle>
             <sync:PivotGridControl.ColumnHeaderCellStyle>
-                <sync:PivotGridCellStyle Style="{StaticResource rowStyle}" />
+                <sync:PivotGridCellStyle Style="{StaticResource HeaderCellstyle}" />
             </sync:PivotGridControl.ColumnHeaderCellStyle>
         </sync:PivotGridControl>
 
