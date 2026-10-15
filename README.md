@@ -32,10 +32,6 @@ The application does the following:
 - .NET Framework 4.5 or later
 - Syncfusion WPF controls
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Support
 
 If you require any assistance, please contact our [Syncfusion support team](https://support.syncfusion.com/).
